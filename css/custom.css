@@ -322,7 +322,19 @@ VARIABLES
   /*---------------------------------------
     VIDEO PLANTEAR Y MIRAR COMO CUADRARLO BIEN              
   -----------------------------------------*/
-
+  .video-wrap {
+    z-index: -100;
+  }
+  
+  .custom-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
   
   /*---------------------------------------
     SITE HEADER              
