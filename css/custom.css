@@ -584,12 +584,59 @@ strong {
         transform: rotate(360deg);
     }
 }
+/*---------------------------------------
+  BANNER              
+-----------------------------------------*/
+
+.infoBanner{
+    background: #000;
+    height: 300px;
+}
+
+.animation{
+    position: static;
+    top: 0;
+    left: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    background-color: #000;
+    color: #ffffff;
+    overflow: hidden;
+    justify-content: center;
+    z-index: 100;
+    width: 100%;
+}
+
+.animate{
+    font-size: 100px;
+    text-transform: uppercase;
+    color: yellow;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    } 
+}
+
+.animate span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #39ff14;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+
 
 /*---------------------------------------
   ABOUT              
 -----------------------------------------*/
-
-
 
 .text-parallax{
     padding: 280px 0;
