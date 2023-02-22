@@ -3,6 +3,8 @@
 
 (function ($) {
 
+    //Plantar puldar link y dejar el menu arriba
+
       $('.smoothscroll').click(function(){
         let el = $(this).attr('href');
         let elWrapped = $(el);

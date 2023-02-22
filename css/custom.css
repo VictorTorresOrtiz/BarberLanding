@@ -362,7 +362,7 @@ VARIABLES
   }
   
   .navbar {
-    background: black;
+    background: transparent;
     z-index: 9;
   }
   
