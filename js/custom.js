@@ -3,8 +3,7 @@
 
 (function ($) {
 
-    //Plantar puldar link y dejar el menu arriba
-
+    
       $('.smoothscroll').click(function(){
         let el = $(this).attr('href');
         let elWrapped = $(el);
@@ -20,7 +19,7 @@
     
           $('body,html').animate({
           scrollTop: totalScroll
-          }, 300);//Tiempo TESTEAR
+          }, 700);//Tiempo TESTEAR
         }
       });
     

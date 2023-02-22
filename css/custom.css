@@ -569,6 +569,65 @@ VARIABLES
       transform: rotate(360deg);
     }
   }
+
+  /*---------------------------------------
+  PROJECTS, GALLERY              
+-----------------------------------------*/
+.sectionProyectBg{
+    background-color: lightgrey;
+}
+.proyects {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  
+  .proyects {
+    border-radius: var(--border-radius-medium);
+    display: block;
+    width: 100%;
+  }
+  
+  .proyects:hover .proyects-hover {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .proyects-hover {
+    background-color: var(--primary-color);
+    background-color: rgba(248, 203, 46, 0.75);
+    border-radius: var(--border-radius-medium);
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    margin: 20px;
+    padding: 35px;
+    transition: all 0.5s ease;
+    transform: translateY(100%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .proyects-hover p strong {
+    color: var(--white-color);
+    display: inline-block;
+    min-width: 180px;
+    margin-right: 20px;
+  }
+  
+  .proyects-hover p a {
+    color: var(--secondary-color);
+  }
+  
+  .proyects-hover p a:hover {
+    color: var(--white-color);
+  }
+  
+  .proyects-hover hr {
+    margin: 1.5rem 0;
+  }
   
   
   /*---------------------------------------

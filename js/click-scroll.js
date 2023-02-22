@@ -1,11 +1,11 @@
 'use strict'
-//Basicamente la utilidad de esta libreria es hacer una animación al pulsar click llamando a .clickscroll 
-let sectionArray = [1, 2, 3, 4, 5, 6];//Array del menu
+//Basicamente la utilidad de esta libreria es hacer una animación al pulsar click llamando a .clickscroll y que esta se quede en active
+let sectionArray = [1, 2, 3, 4, 5];//Array del menu
 
 $.each(sectionArray, function(index, value){
           
      $(document).scroll(function(){
-         let offsetSection = $('#' + 'section_' + value).offset().top - 83;
+         let offsetSection = $('#' + 'section_' + value).offset().top - 83; //con los atributos del id="#seccion_(numero del array)"
          let docScroll = $(document).scrollTop();
          let docScroll1 = docScroll + 1;
          
