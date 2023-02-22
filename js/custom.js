@@ -24,3 +24,12 @@
       });
     
     })(window.jQuery);
+
+
+//Parallax Effect
+let box = $(document),
+    bgAnimate = $('div.text-parallax');
+box.on('scroll', function(){
+    let boxAnimate = box.scrollTop();
+    bgAnimate.css('background-position', '0' + -boxAnimate/4 + 'px');
+});

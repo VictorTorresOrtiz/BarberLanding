@@ -21,6 +21,8 @@
     <script defer src="js/custom.js"></script>
     <script defer src="js/click-scroll.js"></script>
     <script defer src="js/jquery.sticky.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
 
 <body data-aos="fade-up">
@@ -61,7 +63,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">Proyectos</a>
+                            <a class="nav-link click-scroll" href="#section_2">Sobre Nosotros</a>
                         </li>
 
                         <li class="nav-item">
@@ -69,7 +71,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="">Sobre Nosotros</a>
+                            <a class="nav-link click-scroll" href="">Proyectos</a>
                         </li>
                     </ul>
 
@@ -91,7 +93,7 @@
                         <h1 class="text-white mb-5">Barberia la class</h1>
 
                         <a class="btn custom-btn smoothscroll ld ld-move-fade-ttb"
-                            href="#">Información</a><!--El sticky para debajo RECORDAR-->
+                            href="#section_2">Información</a><!--El sticky para debajo RECORDAR-->
                     </div>
 
                     <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
@@ -140,6 +142,14 @@
                     <source src="video/video.mp4" type="video/mp4">
                 </video>
             </div>
+        </section>
+
+        <!--SOBRE NOSOTROS-->
+        <section class="wrapper " id="section_2">
+                <div class="text-parallax">
+                    <h1>Sobre Nosotros</h1>
+                </div>
+           
         </section>
 
         <section class="proyects-section section-padding sectionProyectBg" id="section_2">
@@ -222,6 +232,7 @@
                             </div>
                         </div>
             </section>
+            
     </main>
 </body>
 <!--Inicializar el aos alfinal para su carga correcta-->
