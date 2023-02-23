@@ -612,7 +612,7 @@ strong {
 .animate{
     font-size: 100px;
     text-transform: uppercase;
-    color: yellow;
+    color: var(--secondary-color);
     animation: animate 10s linear infinite;
 }
 @keyframes animate {
@@ -626,7 +626,7 @@ strong {
 
 .animate span{
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #39ff14;
+    -webkit-text-stroke: 1px var(--secondary-color);
     margin-left: 10px;
     margin-right: 10px;
 
@@ -714,7 +714,9 @@ strong {
   
   .aboutButton{
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 17px;
     line-height: 30px;
     color: #ffffff;
@@ -732,6 +734,7 @@ strong {
     color: #ffffff;
   }
   .about-section{
+    background-color: lightgrey;
     position: relative;
     padding: 120px 0 70px;
   }
@@ -814,7 +817,7 @@ strong {
   
 
 /*---------------------------------------
-  PROJECTS, GALLERY              
+  PROJECTS, GALLERY  (REUTILIZAR)           
 -----------------------------------------*/
 .sectionProyectBg {
     background-color: lightgrey;
@@ -873,6 +876,105 @@ strong {
     margin: 1.5rem 0;
 }
 
+/*---------------------------------------
+    PROJECTS GALLERY               
+  -----------------------------------------*/
+
+.flex-container {
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    display: -webkit-flex;
+
+    display: flex;
+    overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+   }
+}
+
+
+.flex-slide {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    cursor: pointer;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+@media screen and (max-width: 768px) {
+    .flex-slide {
+        overflow: auto;
+        overflow-x: hidden;
+   }
+}
+@media screen and (max-width: 768px) {
+    .flex-slide p {
+        font-size: 2em;
+   }
+}
+@media screen and (max-width: 768px) {
+    .flex-slide ul li {
+        font-size: 2em;
+   }
+}
+.flex-slide:hover {
+    -webkit-flex-grow: 3;
+    flex-grow: 3;
+}
+.pelado1 {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/model-2911325.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment:fixed;
+}
+@media screen and (min-width: 768px) {
+    .pelado1 {
+        animation: aboutFlexSlide 3s 1;
+        animation-delay: 0s;
+   }
+}
+@keyframes aboutFlexSlide {
+    0% {
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+   }
+    50% {
+        -webkit-flex-grow: 3;
+        flex-grow: 3;
+   }
+    100% {
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+   }
+}
+
+
+.pelado2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/man-3403180.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.pelado3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/lake-696098_1920.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.pelado4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/forest-208517_1280.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
 
 /*---------------------------------------
     RESPONSIVE STYLES               

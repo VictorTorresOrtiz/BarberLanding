@@ -33,3 +33,27 @@ box.on('scroll', function(){
     let boxAnimate = box.scrollTop();
     bgAnimate.css('background-position', '0' + -boxAnimate/4 + 'px');
 });
+
+//Gallery
+(function(){
+	
+	$(".flex-slide").each(function(){
+		$(this).hover(function(){
+			$(this).find('.flex-title').css({
+				transform: 'rotate(0deg)',
+				top: '10%'
+			});
+			$(this).find('.flex-about').css({
+				opacity: '1'
+			});
+		}, function(){
+			$(this).find('.flex-title').css({
+				transform: 'rotate(90deg)',
+				top: '15%'
+			});
+			$(this).find('.flex-about').css({
+				opacity: '0'
+			});
+		})
+	});
+})();
