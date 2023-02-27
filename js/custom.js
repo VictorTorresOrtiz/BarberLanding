@@ -228,6 +228,23 @@ function sendError(){
       fadeOnHover: true,
       roundedCorner: false,
     })
+
+    //Submit
+    if (nombre.value !== null && nombre.value !== '' && nombre.value.match(namePattern) !== null && apellidos.value !== null && apellidos.value !== '' && apellidos.value.match(namePattern) !== null && telefono.value !== null && telefono.value  !== '' && telefono.value .match(mobilePattern) !== null && pelado.value !== null && pelado.value !== '' ){
+      $.iaoAlert({
+        msg: "Pelado invalido",
+        type: "success",
+        mode: "dark",
+        autoHide: true,
+        alertTime: "3000",
+        fadeTime: "500",
+        closeButton: true,
+        closeOnClick: false,
+        position: 'top-right',
+        fadeOnHover: true,
+        roundedCorner: false,
+      })
+    }
   }
   
 
