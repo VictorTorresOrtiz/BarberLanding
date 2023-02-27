@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <title>Barber - Landing Page</title>
 
     <!-- CSS FILES -->
@@ -17,16 +18,20 @@
     <link rel="stylesheet" type="text/css" href="css/cards.css" />
     
     <!-- JAVASCRIPT FILES -->
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="js/jquery.min.js"></script>
     <script defer src="js/bootstrap.min.js"></script>
     <script defer src="js/custom.js"></script>
     <script defer src="js/click-scroll.js"></script>
     <script defer src="js/jquery.sticky.js"></script>
+    
+
 
 </head>
 
 <body onload="load()">
     <div id="loader"></div>
+   
     <main id="content" class="animate-bottom">
         <!--Header-->
         <header class="site-header">
@@ -73,7 +78,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="">Servicios</a>
+                            <a class="nav-link click-scroll" href="#section_4">Servicios</a>
                         </li>
                     </ul>
 
@@ -100,16 +105,16 @@
 
                     <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
                         <div class="date-wrap">
-                            <h5 class="text-white">
-                                <i class="custom-icon bi-geo-alt l me-2 "></i>
-                                C/Malta Local 1
+                            <h5 class="text-white" onclick="maps()">
+                                <i class="custom-icon bi-signpost l me-2 "></i>
+                                C/Gomera
                             </h5>
                         </div>
 
                         <div class="location-wrap mx-auto py-3 py-lg-0">
                             <h5 class="text-white">
                                 <i class="custom-icon bi-geo-alt me-2"></i>
-                                Alcala de guadaira
+                                Fuengirola Málaga
                             </h5>
                         </div>
                 
@@ -187,7 +192,7 @@
         <!--Parallax -->
         <section class="wrapper " id="section_3">
             <div class="text-parallax">
-                <h1>Nuestros Proyectos</h1>
+                <h1>Proyectos y Servicios</h1>
             </div>
         </section>
         <!--Parallax-->
@@ -195,23 +200,77 @@
         <!--Poryectos-->
         <section class="sectionProyectBg justify-content-center d-flex align-items-lg-center" data-aos="fade-up">
             <div class="l-container">
-                <div class="card">
+                <div class="card" onclick="corte1()">
                   <div class="card_cover card_cut_fade"></div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="corte2()">
                   <div class="card_cover card_cut_long"></div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="corte3()">
                   <div class="card_cover card_cut_fade_tall"></div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="corte4()">
                   <div class="card_cover card_cut_fade_afro"></div>
                 </div>
               </div>
         </section>
+         <!--Services-->
+         <div class="container" id="section_4">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <h2 class="text-center mb-4">Servicios</h2>
+                </div>
+            </div>
+            <div class="row pb-5" data-aos="fade-left">
+               
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-box-1">
+                        <div class="icon">
+                            <i class="bi bi-scissors"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h5>Cortes Personalizados</h5>
+                            <p>Cortes innovadores y con estilo propio.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-box-1">
+                        <div class="icon">
+                            <i class="b bi-cash"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h5>Económico</h5>
+                            <p>Precio adaptado a cada corte.</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-box-1">
+                        <div class="icon">
+                            <i class="bi bi-plus"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h5>Calidad</h5>
+                            <p>Dedicación y calidad en nuestros cortes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Services-->
         <!--Proyectos--> 
+         <!--Parallax -->
+         <section class="wrapper " id="section_6">
+            <div class="services-parallax">
+                <h1>Contacto</h1>
+            </div>
+        </section>
+        <!--Parallax-->
         <!--Contact-->
-        <section class="contact-section section-padding" id="section_6">
+        <section class="contact-section section-padding">
             <div class="container">
                 <div class="row">
 
