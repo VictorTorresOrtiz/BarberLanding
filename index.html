@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,7 @@
     <link href="css/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/animatedButtons.css" />
     <link rel="stylesheet" type="text/css" href="css/cards.css" />
+
     
     <!-- JAVASCRIPT FILES -->
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -31,7 +32,6 @@
 
 <body onload="load()">
     <div id="loader"></div>
-   
     <main id="content" class="animate-bottom">
         <!--Header-->
         <header class="site-header">
@@ -107,7 +107,7 @@
                         <div class="date-wrap">
                             <h5 class="text-white" onclick="maps()">
                                 <i class="custom-icon bi-signpost l me-2 "></i>
-                                C/Gomera
+                                C/Gomera  <span class="badge text-bg-transparent small">Ver mas</span>
                             </h5>
                         </div>
 
@@ -154,7 +154,7 @@
 
         <!--Sobre Nosotros-->
         <section class="about-section" id="section_2">
-            <div class="container" data-aos="zoom-in">
+            <div class="container">
                 <div class="row">
                     <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
                         <div class="inner-column">
@@ -198,7 +198,7 @@
         <!--Parallax-->
 
         <!--Poryectos-->
-        <section class="sectionProyectBg justify-content-center d-flex align-items-lg-center" data-aos="fade-up">
+        <section class="sectionProyectBg justify-content-center d-flex align-items-lg-center" >
             <div class="l-container">
                 <div class="card" onclick="corte1()">
                   <div class="card_cover card_cut_fade"></div>
@@ -221,7 +221,7 @@
                     <h2 class="text-center mb-4">Servicios</h2>
                 </div>
             </div>
-            <div class="row pb-5" data-aos="fade-left">
+            <div class="row pb-5" >
                
                 <div class="col-sm-6 col-lg-4">
                     <div class="feature-box-1">
@@ -317,10 +317,4 @@
               </div>
     </main>
 </body>
-<!--Inicializar el aos alfinal para su carga correcta-->
-<script src="js/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-
 </html>

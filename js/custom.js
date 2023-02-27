@@ -1,11 +1,16 @@
 'use strict'
 //Voy a customizar los links dandole un efecto smooth al pulsar llamando a la funcion smoothscroll
 
+//Cargar al hacer scroll
+
+
+
+
 //Loader
 let myLoader;
 
 function load() {
-  myLoader = setTimeout(showPage, 2000);
+  myLoader = setTimeout(showPage, 1000);
 }
 
 function showPage() {
@@ -92,6 +97,11 @@ function corte4(){
     text: 'Corte afro con fade al 0,5',
    
   })
+}
+
+//Indicar que el formulario no funciona
+function send(){
+  let 
 }
 
 
