@@ -203,6 +203,56 @@ strong {
     transform-origin: 19px 15px;
 }
 
+/*---Loader-----*/
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
+  #content {
+    display: none;
+    text-align: center;
+  }
 
 /*---------------------------------------
     SECTION               
@@ -324,7 +374,7 @@ strong {
 
 
 /*---------------------------------------
-    VIDEO PLANTEAR Y MIRAR COMO CUADRARLO BIEN              
+    VIDEO          
   -----------------------------------------*/
 .video-wrap {
     z-index: -100;
@@ -344,7 +394,7 @@ strong {
     SITE HEADER              
   -----------------------------------------*/
 .site-header {
-    background-color: var(--primary-color);
+    background-color: var(--dark-color);
     padding-top: 12px;
     padding-bottom: 12px;
 }
@@ -639,8 +689,8 @@ strong {
 -----------------------------------------*/
 
 .text-parallax{
-    padding: 200px 0;
-    background-image: url('/assets/proyects.jpg');
+    padding: 150px 0;
+    background-image: url('https://www.wallpapertip.com/wmimgs/43-439181_barber-shop.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -874,108 +924,6 @@ strong {
 
 .proyects-hover hr {
     margin: 1.5rem 0;
-}
-
-
-
-/*---------------------------------------
-    PROJECTS GALLERY               
-  -----------------------------------------*/
-
-.flex-container {
-    position: absolute;
-    height: 90vh;
-    width: 100%;
-    display: -webkit-flex;
-
-    display: flex;
-    overflow: hidden;
-}
-@media screen and (max-width: 768px) {
-    .flex-container {
-        flex-direction: column;
-   }
-}
-
-
-.flex-slide {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    cursor: pointer;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-}
-@media screen and (max-width: 768px) {
-    .flex-slide {
-        overflow: auto;
-        overflow-x: hidden;
-   }
-}
-@media screen and (max-width: 768px) {
-    .flex-slide p {
-        font-size: 2em;
-   }
-}
-@media screen and (max-width: 768px) {
-    .flex-slide ul li {
-        font-size: 2em;
-   }
-}
-.flex-slide:hover {
-    -webkit-flex-grow: 3;
-    flex-grow: 3;
-}
-.pelado1 {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/model-2911325.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-attachment:fixed;
-}
-@media screen and (min-width: 768px) {
-    .pelado1 {
-        animation: aboutFlexSlide 3s 1;
-        animation-delay: 0s;
-   }
-}
-@keyframes aboutFlexSlide {
-    0% {
-        -webkit-flex-grow: 1;
-        flex-grow: 1;
-   }
-    50% {
-        -webkit-flex-grow: 3;
-        flex-grow: 3;
-   }
-    100% {
-        -webkit-flex-grow: 1;
-        flex-grow: 1;
-   }
-}
-
-
-.pelado2 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/man-3403180.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-}
-
-.pelado3 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/lake-696098_1920.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-}
-.pelado4 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/forest-208517_1280.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
 }
 
 /*---------------------------------------

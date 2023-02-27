@@ -1,5 +1,15 @@
 'use strict'
 //Voy a customizar los links dandole un efecto smooth al pulsar llamando a la funcion smoothscroll
+let myLoader;
+
+function load() {
+  myLoader = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("content").style.display = "block";
+}
 
 (function ($) {
 
