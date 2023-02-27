@@ -232,8 +232,8 @@ function sendError(){
     //Submit
     if (nombre.value !== null && nombre.value !== '' && nombre.value.match(namePattern) !== null && apellidos.value !== null && apellidos.value !== '' && apellidos.value.match(namePattern) !== null && telefono.value !== null && telefono.value  !== '' && telefono.value .match(mobilePattern) !== null && pelado.value !== null && pelado.value !== '' ){
       $.iaoAlert({
-        msg: "Pelado invalido",
-        type: "success",
+        msg: "El formulario no esta disponible en estos momentos",
+        type: "warning",
         mode: "dark",
         autoHide: true,
         alertTime: "3000",
@@ -246,7 +246,4 @@ function sendError(){
       })
     }
   }
-  
-
-
 }
