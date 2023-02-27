@@ -12,6 +12,21 @@ function showPage() {
 }
 //Loader
 
+//Scroll reveal
+// Progressive show elements
+jQuery(function () {
+  $(window).on("scroll", function () {
+      $(".hidden-content").each(function (i) {
+          let underObject = $(this).offset().top + $(this).outerHeight();
+          let underWindow = $(window).scrollTop() + $(window).height();
+
+          if (underWindow > underObject) {
+              $(this).animate({ opacity: "1" }, 750);
+          }
+      });
+  });
+});
+
 //Smooth scroll + cargar pagina con efecto fade
 (function ($) {
 
