@@ -1,7 +1,4 @@
 'use strict'
-//Voy a customizar los links dandole un efecto smooth al pulsar llamando a la funcion smoothscroll
-
-
 //Loader
 let myLoader;
 
