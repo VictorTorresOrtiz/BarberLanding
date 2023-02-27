@@ -1,16 +1,12 @@
 'use strict'
 //Voy a customizar los links dandole un efecto smooth al pulsar llamando a la funcion smoothscroll
 
-//Cargar al hacer scroll
-
-
-
 
 //Loader
 let myLoader;
 
 function load() {
-  myLoader = setTimeout(showPage, 1000);
+  myLoader = setTimeout(showPage, 2000);
 }
 
 function showPage() {
@@ -100,8 +96,140 @@ function corte4(){
 }
 
 //Indicar que el formulario no funciona
-function send(){
-  let 
+function sendError(){
+  let nombre = document.getElementById('contact-name');
+  let apellidos = document.getElementById('contact-surname');
+  let telefono = document.getElementById('contact-mobile');
+  let pelado = document.getElementById('contact-message');
+
+  //Nombre
+  let namePattern = "^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$";
+
+  if (nombre.value == null | nombre.value== ''){
+    $.iaoAlert({
+      msg: "Tienes que reñenar el campo Nombre",
+      type: "error",
+      mode: "dark",
+      autoHide: true,
+      alertTime: "3000",
+      fadeTime: "500",
+      closeButton: true,
+      closeOnClick: false,
+      position: 'top-right',
+      fadeOnHover: true,
+      roundedCorner: false,
+    })
+  } else if (nombre.value.match(namePattern) == '') {
+    $.iaoAlert({
+      msg: "Nombre invalido",
+      type: "error",
+      mode: "dark",
+      autoHide: true,
+      alertTime: "3000",
+      fadeTime: "500",
+      closeButton: true,
+      closeOnClick: false,
+      position: 'top-right',
+      fadeOnHover: true,
+      roundedCorner: false,
+    })
+  }
+
+  //Apellidos
+  if (apellidos.value == null | apellidos.value== ''){
+    $.iaoAlert({
+      msg: "Tienes que reñenar el campo Apellidos",
+      type: "error",
+      mode: "dark",
+      autoHide: true,
+      alertTime: "3000",
+      fadeTime: "500",
+      closeButton: true,
+      closeOnClick: false,
+      position: 'top-right',
+      fadeOnHover: true,
+      roundedCorner: false,
+    })
+  } else if (apellidos.value.match(namePattern) == '') {
+    $.iaoAlert({
+      msg: "Apellidos invalidos",
+      type: "error",
+      mode: "dark",
+      autoHide: true,
+      alertTime: "3000",
+      fadeTime: "500",
+      closeButton: true,
+      closeOnClick: false,
+      position: 'top-right',
+      fadeOnHover: true,
+      roundedCorner: false,
+    })
+  }
+
+  //Telefono
+  let mobilePattern = /^\d{3}\s\d{2}\s\d{2}\s\d{2}$/;
+
+  if (telefono.value == null | telefono.value== ''){
+    $.iaoAlert({
+      msg: "Tienes que reñenar el campo telefono",
+      type: "error",
+      mode: "dark",
+      autoHide: true,
+      alertTime: "3000",
+      fadeTime: "500",
+      closeButton: true,
+      closeOnClick: false,
+      position: 'top-right',
+      fadeOnHover: true,
+      roundedCorner: false,
+    })
+  } else if (telefono.value.match(mobilePattern) == '') {
+    $.iaoAlert({
+      msg: "Telefono invalido",
+      type: "error",
+      mode: "dark",
+      autoHide: true,
+      alertTime: "3000",
+      fadeTime: "500",
+      closeButton: true,
+      closeOnClick: false,
+      position: 'top-right',
+      fadeOnHover: true,
+      roundedCorner: false,
+    })
+  }
+
+  //Pelados
+  if (pelado.value == null | pelado.value== ''){
+    $.iaoAlert({
+      msg: "Tienes que reñenar el campo Pelados",
+      type: "error",
+      mode: "dark",
+      autoHide: true,
+      alertTime: "3000",
+      fadeTime: "500",
+      closeButton: true,
+      closeOnClick: false,
+      position: 'top-right',
+      fadeOnHover: true,
+      roundedCorner: false,
+    })
+  } else if (pelado.value.match(namePattern) == '') {
+    $.iaoAlert({
+      msg: "Pelado invalido",
+      type: "error",
+      mode: "dark",
+      autoHide: true,
+      alertTime: "3000",
+      fadeTime: "500",
+      closeButton: true,
+      closeOnClick: false,
+      position: 'top-right',
+      fadeOnHover: true,
+      roundedCorner: false,
+    })
+  }
+  
+
+
 }
-
-
