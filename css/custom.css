@@ -23,7 +23,6 @@ VARIABLES
     --h6-font-size: 22px;
     --p-font-size: 18px;
     --btn-font-size: 14px;
-    --copyright-font-size: 16px;
 
     --border-radius-large: 100px;
     --border-radius-medium: 20px;
@@ -287,43 +286,6 @@ strong {
     padding: 45px;
 }
 
-.nav-tabs {
-    background-color: var(--section-bg-color);
-    border-radius: var(--border-radius-large);
-    border-bottom: 0;
-    padding: 15px;
-}
-
-.nav-tabs .nav-link {
-    border-radius: var(--border-radius-large);
-    border: 0;
-    padding: 15px 25px;
-    transition: all 0.3s;
-}
-
-.nav-tabs .nav-link:first-child {
-    margin-right: 15px;
-}
-
-.nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-link:focus,
-.nav-tabs .nav-link:hover {
-    background: var(--white-color);
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
-    color: var(--primary-color);
-}
-
-.nav-tabs h5 {
-    color: var(--p-color);
-    margin-bottom: 0;
-}
-
-.nav-tabs .nav-link.active h5,
-.nav-tabs .nav-link:focus h5,
-.nav-tabs .nav-link:hover h5 {
-    color: var(--primary-color);
-}
 
 
 /*---------------------------------------
@@ -634,55 +596,6 @@ strong {
         transform: rotate(360deg);
     }
 }
-/*---------------------------------------
-  BANNER              
------------------------------------------*/
-
-.infoBanner{
-    background: #000;
-    height: 300px;
-}
-
-.animation{
-    position: static;
-    top: 0;
-    left: 0;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    background-color: #000;
-    color: #ffffff;
-    overflow: hidden;
-    justify-content: center;
-    z-index: 100;
-    width: 100%;
-}
-
-.animate{
-    font-size: 100px;
-    text-transform: uppercase;
-    color: var(--secondary-color);
-    animation: animate 10s linear infinite;
-}
-@keyframes animate {
-    0%{
-        transform: translateX(-100%);
-    }
-    100%{
-        transform: translateX(100%);
-    } 
-}
-
-.animate span{
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px var(--secondary-color);
-    margin-left: 10px;
-    margin-right: 10px;
-
-}
-
-
 
 /*---------------------------------------
   ABOUT              
@@ -873,58 +786,34 @@ strong {
     background-color: lightgrey;
 }
 
-.proyects {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-
-.proyects {
-    border-radius: var(--border-radius-medium);
-    display: block;
-    width: 100%;
-}
-
-.proyects:hover .proyects-hover {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.proyects-hover {
-    background-color: var(--primary-color);
-    background-color: rgba(248, 203, 46, 0.75);
-    border-radius: var(--border-radius-medium);
-    backdrop-filter: blur(5px) saturate(180%);
-    -webkit-backdrop-filter: blur(5px) saturate(180%);
-    margin: 20px;
-    padding: 35px;
-    transition: all 0.5s ease;
-    transform: translateY(100%);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    opacity: 0;
-}
-
-.proyects-hover p strong {
+  
+  /*---------------------------------------
+    CUSTOM FORM CONTACT            
+  -----------------------------------------*/
+  .custom-form .form-control {
+    color: var(--p-color);
+    margin-bottom: 24px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    outline: none;
+  }
+  
+  .custom-form button[type="submit"] {
+    background: var(--custom-btn-bg-color);
+    border: none;
+    border-radius: var(--border-radius-large);
     color: var(--white-color);
-    display: inline-block;
-    min-width: 180px;
-    margin-right: 20px;
-}
-
-.proyects-hover p a {
-    color: var(--secondary-color);
-}
-
-.proyects-hover p a:hover {
-    color: var(--white-color);
-}
-
-.proyects-hover hr {
-    margin: 1.5rem 0;
-}
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-medium);
+    transition: all 0.3s;
+    margin-bottom: 0;
+  }
+  
+  .custom-form button[type="submit"]:hover,
+  .custom-form button[type="submit"]:focus {
+    background: var(--custom-btn-bg-hover-color);
+    border-color: transparent;
+  }
 
 /*---------------------------------------
     RESPONSIVE STYLES               

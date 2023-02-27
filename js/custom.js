@@ -1,16 +1,20 @@
 'use strict'
 //Voy a customizar los links dandole un efecto smooth al pulsar llamando a la funcion smoothscroll
+
+//Loader
 let myLoader;
 
 function load() {
-  myLoader = setTimeout(showPage, 3000);
+  myLoader = setTimeout(showPage, 2000);
 }
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("content").style.display = "block";
 }
+//Loader
 
+//Smooth scroll + cargar pagina con efecto fade
 (function ($) {
 
     
@@ -44,26 +48,3 @@ box.on('scroll', function(){
     bgAnimate.css('background-position', '0' + -boxAnimate/4 + 'px');
 });
 
-//Gallery
-(function(){
-	
-	$(".flex-slide").each(function(){
-		$(this).hover(function(){
-			$(this).find('.flex-title').css({
-				transform: 'rotate(0deg)',
-				top: '10%'
-			});
-			$(this).find('.flex-about').css({
-				opacity: '1'
-			});
-		}, function(){
-			$(this).find('.flex-title').css({
-				transform: 'rotate(90deg)',
-				top: '15%'
-			});
-			$(this).find('.flex-about').css({
-				opacity: '0'
-			});
-		})
-	});
-})();
