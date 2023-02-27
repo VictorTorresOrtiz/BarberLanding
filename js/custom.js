@@ -3,7 +3,7 @@
 let myLoader;
 
 function load() {
-  myLoader = setTimeout(showPage, 2000);
+  myLoader = setTimeout(showPage, 900);
 }
 
 function showPage() {
